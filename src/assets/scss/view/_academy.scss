@@ -1,0 +1,150 @@
+/***academys***/
+
+.academy_list {
+    .title_box {
+      text-align: center;
+      padding: 30px;
+  
+      h1 {
+        font-size: 56px;
+      }
+    }
+
+    .content-wrap{
+
+      @include fx($h:$CT);
+
+
+      .content-left{
+        width: 47%;
+        overflow-y: scroll;
+        height: 75vh;
+        padding: 0px 20px;
+        .search_box {
+          .search{
+            background-color: #00ffa8;
+            width: 100%;
+            font-size: 1.5em;
+            @include fx($v:$CT);
+            input[type=text]{
+              border: none;
+              background-color: inherit;
+              width: 92%;
+              font-size: 0.625em;
+            }
+            .search_bt{
+              width: 8%;
+              @include fx($v:$CT);
+              border: 2px solid #00ffa8;
+              i{
+                background-color: white;
+                font-size: 0.75em;
+                padding: 4px;
+              }
+            }
+          }
+      
+      
+          .bottom {
+            @include fx($h:$FS,$v:$CT);
+            padding: 10px 0px;
+            text-align: center;
+            @include fx($v:$CT,$h:$SB);
+            .calss-level{
+              @include fx($v:$CT);
+              li{
+                margin-right: 8px;
+                line-height: 26px;
+                font-size: 14px;
+                color: #898989;
+        
+                &:not(:first-child):after {
+                  content: "/";
+                  background-color: white;
+                  color: #898989;
+                }
+        
+                &:last-child {
+                  margin-right: 0px;
+                  &::after {
+                    display: none;
+                  }
+                }
+        
+                &.on {
+                  background-color: black;
+                  color: #00ffa8;
+                }
+              }
+            }
+            
+          }
+        }
+
+        .img-list{
+          >li{
+            border-bottom: 1px solid black;
+            padding: 12px 0;
+            &:first-child{
+              padding-top: 0px;
+            }
+            .card-wrap{
+              div,ul{
+                padding-bottom: 8px;
+              }
+              .card-img{
+                height: 100px;
+                width: 100%;
+                background-size: cover;
+                background-position: center;
+                border-radius: 48px;
+              }
+              .title{
+                padding-top: 8px;
+                font-size: 1.375em;
+                font-weight: bold;
+                @include fx($h:$SB);
+              }
+              .address{
+                font-weight: 500;
+                font-style: italic;
+              }
+              .label-wrap{
+                @include fx();
+                li{
+                  font-size: 0.75em;
+                  font-weight: bold;
+                  padding: 4px;
+                  &:not(:last-child){
+                    border: 2px solid black;
+                    border-radius: 12px;
+                    margin-right: 6px;
+                  }
+                  &:last-child{
+                    background-color: red;
+                    color: white;
+                    font-weight: 500;
+                    line-height: 1.5em;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+        
+      }
+      .content-right{
+        width: 47%;
+        padding: 0px 20px;
+        #map{
+          width: 100%;
+          height: 75vh;
+          @include shadow($x:0px,$y:5px,$b:10px,$o:0.5);    
+        }
+      }
+
+    }
+  
+    
+  }

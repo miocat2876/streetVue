@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR&display=swap');
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+@font-face {
+  font-family: 'Surt';
+  font-style: normal;
+  src: "@/assets/font/Surt-RegularExtended.eot", "@/assets/font/Surt-RegularExtended.woff" format("woff"), "@/assets/font/Surt-RegularExtended.woff2" format("woff2");
+}
+
+@font-face {
+  font-family: 'Surt';
+  font-style: oblique;
+  src: "@/assets/font/Surt-RegularExtendedOblique.eot", "@/assets/font/Surt-RegularExtendedOblique.woff" format("woff"), "@/assets/font/Surt-RegularExtendedOblique.woff2" format("woff2");
+}
+
+*, ::before, ::after {
+  
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: none;
+    color: #333;
+    box-sizing: border-box;
+    vertical-align: middle;
+    &:not(i){
+      font-family: 'Surt', 'Nanum Gothic', 'NanumSquare', 'Noto Sans KR', sans-serif;
+    }
+    position: relative;
+  
+ 
+}
+
+html, body {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+}
+
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+textarea {
+  padding: 10px;
+}
+
+input {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.blind {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.bolder {
+  font-weight: 800;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.w100 {
+  width: 100% !important;
+  padding: 0px !important;
+}
+
+.no_margin {
+  margin-top: 0 !important;
+}
+
+.contents_box {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+.content_1200 {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+}
+
+.content_1840 {
+  max-width: 1840px;
+  margin: 0 auto;
+  position: relative;
+  height: auto;
+}
+
+.content_1200p {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  height: auto;
+}
+
+.content_1840p {
+  max-width: 1840px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  height: auto;
+}
+
+.content_full {
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+.contents_box::after, .content_1200::after, .content_1840::after, .content_1200p::after, .content_1840p::after, .content_full::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.SumoSelect {
+  width: 100% !important;
+
+  > {
+    .CaptionCont {
+      width: 100% !important;
+      text-align: center !important;
+      border: none !important;
+    }
+
+    .optWrapper > .options li label {
+      text-align: center !important;
+    }
+  }
+
+  &.open > .CaptionCont, &:focus > .CaptionCont, &:hover > .CaptionCont {
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
+
+.w100{
+	width: 100%;
+}
+
+.clear:after{
+	display: block; content: ""; clear: both;
+}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 414px) {}

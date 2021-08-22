@@ -1,0 +1,421 @@
+.popup {
+    max-width: 846px;
+    height: auto;
+    margin: 0px auto;
+  
+    .title_bar {
+      position: relative;
+      height: 76px;
+      width: calc(100% - 152px);
+      line-height: 56px;
+      padding-top: 20px;
+      margin: 0px 76px;
+      text-align: center;
+      background-image: "@/images/popup_t.png";
+      background-repeat: repeat-x;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        height: 76px;
+        width: 76px;
+        left: -76px;
+        top: 0px;
+        background-image: "@/images/popup_tl.png";
+      }
+  
+      &::after {
+        content: "";
+        position: absolute;
+        height: 76px;
+        width: 76px;
+        left: 100%;
+        top: 0px;
+        background-image: "@/images/popup_tl.png";
+        transform: scaleX(-1);
+      }
+  
+      h2 {
+        color: white;
+        font-size: 26px;
+      }
+  
+      a {
+        color: white;
+        position: absolute;
+        right: -24px;
+        top: 36px;
+        z-index: 10;
+        width: 2px;
+        height: 24px;
+        background-color: white;
+        transform: rotate(45deg);
+  
+        &::before {
+          content: "";
+          position: absolute;
+          right: 0px;
+          top: 0px;
+          width: 2px;
+          height: 24px;
+          background-color: white;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  
+    .content_box {
+      width: 100%;
+      padding: 0px 46px;
+      margin-bottom: 76px;
+      background-image: "@/images/popup_l.png", "@/images/popup_r.png";
+      background-repeat: repeat-y;
+      background-position: left, right;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 76px;
+        display: block;
+        background-image: "@/images/popup_bl.png", "@/images/popup_br.png";
+        background-position: left, right;
+        background-repeat: no-repeat;
+        top: 100%;
+        left: 0px;
+      }
+  
+      &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 76px;
+        width: calc(100% - 152px);
+        height: 76px;
+        background-image: "@/images/popup_b.png";
+        background-repeat: repeat-x;
+      }
+  
+      > div {
+        background-color: white;
+        width: 100%;
+  
+        &:first-child {
+          padding-top: 20px;
+        }
+      }
+    }
+  
+    h4 {
+      display: inline-block;
+      font-size: 22px;
+      width: 100%;
+      line-height: 30px;
+    }
+  
+    input {
+      background-color: #c9caca;
+      height: 30px;
+      padding: 0px 8px;
+      display: inline-block;
+      font-size: 18px;
+      max-width: 100%;
+    }
+  
+    textarea {
+      background-color: #c9caca;
+      padding: 8px;
+      resize: none;
+      font-size: 18px;
+    }
+  
+    .combo_box {
+      height: 30px;
+    }
+  
+    .SumoSelect > .CaptionCont {
+      background: #c9caca;
+      border-radius: 0px;
+    }
+  
+    .content_box {
+      .top.edit_profile > {
+        .left {
+          width: 145px;
+          height: 145px;
+          float: left;
+  
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+  
+        .right {
+          width: calc(100% - 145px);
+          float: left;
+          padding-left: 10px;
+  
+          > ul > li {
+            margin: 18px 0px;
+  
+            &::after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+  
+            &:first-child {
+              margin-top: 5px;
+            }
+  
+            .title_box {
+              width: 140px;
+              text-align: right;
+              float: left;
+              padding: 1px 20px 1px;
+              display: block;
+  
+              h4 {
+                font-size: 18px;
+                font-weight: 600;
+              }
+            }
+  
+            .value_box {
+              width: calc(100% - 140px);
+              float: left;
+  
+              &::after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+            }
+          }
+  
+          li .value_box {
+            &.level {
+              .combo_box {
+                width: 200px;
+                float: right;
+              }
+  
+              .SumoSelect > .CaptionCont {
+                background-color: white;
+  
+                > span {
+                  text-align: right;
+                }
+              }
+            }
+  
+            &.interest {
+              .combo_box {
+                width: calc(50% - 10px);
+                float: left;
+              }
+  
+              > p {
+                width: 20px;
+                text-align: center;
+                display: block;
+                float: left;
+                font-size: 20px;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+  
+        .bottom {
+          width: calc(100% - 145px);
+          float: left;
+          padding-left: 10px;
+  
+          > ul > li {
+            .title_box {
+              width: 140px;
+              text-align: right;
+              float: left;
+              padding: 1px 20px 1px;
+              display: block;
+  
+              h4 {
+                font-size: 18px;
+                font-weight: 600;
+              }
+            }
+  
+            .value_box {
+              width: calc(100% - 140px);
+              float: left;
+  
+              &::after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+            }
+          }
+        }
+      }
+  
+      .bottom.edit_profile > {
+        ul {
+          padding-bottom: 18px;
+  
+          > li {
+            margin: 18px 0px;
+  
+            &::after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+  
+            &:last-child {
+              margin-bottom: 0px;
+            }
+  
+            .title_box {
+              width: 140px;
+              text-align: center;
+              float: left;
+  
+              h4 {
+                font-size: 18px;
+                font-weight: 600;
+              }
+            }
+  
+            .value_box {
+              width: calc(100% - 140px);
+              float: left;
+              padding-left: 10px;
+  
+              &::after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+  
+              &.mail {
+                input {
+                  width: calc(60% - 15px);
+                  float: left;
+                }
+  
+                .combo_box {
+                  width: calc(40% - 15px);
+                  float: left;
+                }
+  
+                > p {
+                  width: 30px;
+                  text-align: center;
+                  display: block;
+                  float: left;
+                  font-size: 20px;
+                  line-height: 30px;
+                }
+              }
+  
+              &.phone {
+                input {
+                  width: calc(70% - 5px);
+                  float: left;
+                }
+  
+                .combo_box {
+                  width: calc(30% - 5px);
+                  float: left;
+                  margin-right: 10px;
+                }
+              }
+  
+              textarea {
+                width: 100%;
+                height: 80px;
+              }
+            }
+          }
+        }
+  
+        .right {
+          > ul > li {
+            margin: 18px 0px;
+          }
+  
+          .title_box {
+            text-align: center;
+            border-bottom: 1px solid #000;
+            margin-bottom: 18px;
+          }
+        }
+      }
+  
+      .save_bt {
+        position: absolute;
+        right: 46px;
+        bottom: -30px;
+        z-index: 10;
+        font-size: 18px;
+        color: #00ffa8;
+        background-color: #000;
+        padding: 5px;
+      }
+  
+      .top.edit_profile > .bottom li .value_box.tag {
+        .combo_box {
+          width: calc(33.3% - 14px);
+          float: left;
+        }
+  
+        > p {
+          width: 21px;
+          text-align: center;
+          display: block;
+          float: left;
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+  
+      .review_box {
+        h4 {
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 600;
+        }
+  
+        > ul {
+          margin: 12px 0px;
+  
+          > li {
+            background-color: #898989;
+            border-radius: 15px;
+            padding: 4px 10px;
+            float: left;
+            margin-right: 10px;
+            font-size: 14px;
+            color: white;
+            font-weight: 600;
+          }
+        }
+  
+        textarea {
+          width: 100%;
+          height: 140px;
+          margin-bottom: 18px;
+        }
+      }
+    }
+  }
+
+  .contents_box {
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: #c7c8c8;
+    padding: 30px 40px;
+  }
